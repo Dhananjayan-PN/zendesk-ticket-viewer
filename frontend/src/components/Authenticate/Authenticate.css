@@ -1,0 +1,16 @@
+.Authenticate {
+	border-radius: 15px;
+	margin: 80px auto;
+	padding: 25px;
+	width: 60%;
+	max-width: 400px;
+	box-shadow: 0px 4px 10px #cecece;
+}
+
+.input-field {
+	display: flex;
+	width: 100%;
+	margin-top: 20px;
+	padding: auto;
+}
+

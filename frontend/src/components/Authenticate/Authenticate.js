@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
+import Typography from '@mui/material/Typography';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import Cookies from 'js-cookie';
 import axios from 'axios';
 import './Authenticate.css';
-import Cookies from 'js-cookie';
 
 const Authenticate = () => {
   const [subdomain, setSubdomain] = useState("");
@@ -34,10 +37,13 @@ const Authenticate = () => {
   
   return (
     <div className="Authenticate">
-      <input value={subdomain} onChange={e => setSubdomain(e.target.value)}></input>
-      <input value={email} onChange={e => setEmail(e.target.value)}></input>
-      <input value={password} onChange={e => setPassword(e.target.value)}></input>
-      <button onClick={auth}>AUTHENTICATE</button>
+      <Typography variant="h5" style={{textAlign: "center"}} gutterBottom component="div">
+        Authenticate
+      </Typography>
+      <TextField className="input-field" style={{marginBottom: 10}} label="Subdomain" variant="standard" value={subdomain} onChange={e => setSubdomain(e.target.value)}></TextField>
+      <TextField className="input-field" style={{marginBottom: 10}}label="Email" variant="standard" value={email} onChange={e => setEmail(e.target.value)}></TextField>
+      <TextField className="input-field" style={{marginBottom: 10}} label="Password" variant="standard" type="password" value={password} onChange={e => setPassword(e.target.value)}></TextField>
+      <Button style={{display: "flex", margin: "30px auto", marginBottom: 10}} variant="outlined" onClick={auth}>Authenticate</Button>
     </div>
   );
 }

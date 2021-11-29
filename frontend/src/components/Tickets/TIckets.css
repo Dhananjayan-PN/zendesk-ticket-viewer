@@ -1,0 +1,29 @@
+.Tickets {
+	margin: 60px;
+}
+
+.ticket {
+	box-shadow: 0px 4px 10px #cecece;
+	border-radius: 15px;
+	width: 275px;
+	margin: 10px;
+	padding: 15px;
+}
+
+.ticket:hover {
+	cursor: pointer;
+	box-shadow: 0px 8px 14px #cecece;
+}
+
+.ticket-container {
+	display: flex;
+	height: 100vh;
+	width: 95vw;
+	flex-direction: row;
+	align-items: flex-start;
+	align-content: flex-start;
+	flex-wrap: wrap;
+	list-style: none;
+	padding: 0;
+	margin: 0px auto;
+}
