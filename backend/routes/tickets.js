@@ -3,6 +3,7 @@ const ticketsController = require('../controllers/tickets');
 
 router.get('/', ticketsController.ping);
 router.post('/authenticate', ticketsController.authenticate);
-router.post('/tickets', ticketsController.getTickets);
+router.post('/alltickets', ticketsController.getAllTickets);
+router.post('/ticket', ticketsController.getTicket);
 
 module.exports = router;

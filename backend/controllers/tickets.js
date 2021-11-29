@@ -27,8 +27,22 @@ exports.authenticate = (req, res) => {
     })
 }
 
-exports.getTickets = (req, res) => {
+exports.getAllTickets = (req, res) => {
     axios.get(req.body.url ?? `https://${req.body.subdomain}.zendesk.com/api/v2/tickets?page[size]=${req.body.pagesize}`,
+        {
+            headers: {Authorization: `Bearer ${req.body.token}`}
+        }
+    ).then(response => {
+        res.status(200).json(response.data);
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(400).json({message: "Uh oh! Something went wrong!"});
+    })
+}
+
+exports.getTicket = (req, res) => {
+    axios.get(`https://${req.body.subdomain}.zendesk.com/api/v2/tickets/${req.body.id}.json`,
         {
             headers: {Authorization: `Bearer ${req.body.token}`}
         }
