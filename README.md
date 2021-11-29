@@ -13,9 +13,7 @@ The React frontend takes the user's `subdomain`, `email` and `password` for auth
 3. Create a .env in the backend folder to store the `CLIENT_ID` for OAuth
 4. Navigate to the backend folder and start both servers: `cd backend && npm run servers`
 	
-Both development servers will start shortly and http://localhost:3000 will open in your browser showing you the Authentication page. The API will be running in http://localhost:8080
-
-In the authorization page (first page you see) enter your subdomain and user credentials to look at all the tickets.
+Both development servers will start shortly and http://localhost:3000 will open in your browser showing you the Authentication page. In the authentication page enter your subdomain and user credentials to look at all the tickets. The API will be running at http://localhost:8080 listening for requests.
 	
 
  
